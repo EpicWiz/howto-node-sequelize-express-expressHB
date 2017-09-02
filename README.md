@@ -1,4 +1,4 @@
-# **node.js, Sequelize, Express, Express-Handlebars**
+# **Node.JS, Sequelize, Express, Express-Handlebars**
 
 ### A jump start to getting your node.js app working from top to bottom.
 
@@ -6,7 +6,7 @@ This guide assumes you have some basic grasp of the building blocks of a website
 
 ## Contents
 
-### 1. [Getting Set Up](#Getting Set Up) - (installations)
+### 1. [Getting Set Up](#getting-set-up) - (installations)
 
 
 ## Getting Set Up
@@ -15,11 +15,11 @@ The following is the easiest way that I've found to get everything working on a 
 ### Get Homebrew (macOS only)
 Homebrew is a package manager for macOS. This means you can use it to install a lot more useful things far more easily that through alternative means.
 
-First you'll have to open up your terminal.
+* First you'll have to open up your terminal.
 
-_Press `CMD` + `Space` to pull up spotlight._
+* _Press `CMD` + `Space` to pull up spotlight._
 
-Then go ahead and type the following into your terminal and press `Enter`:
+* Then go ahead and type the following into your terminal and press `Enter`:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
