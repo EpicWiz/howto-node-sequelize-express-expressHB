@@ -1,19 +1,20 @@
 # Working With...
-## * Node.JS
-## * Sequelize
-## * Express
-## * Express-Handlebars
+* [**Node.JS**](https://nodejs.org/en/)
+* [**Sequelize**](http://docs.sequelizejs.com/)
+* [**Express**](https://www.npmjs.com/package/express)
+* [**Express-Handlebars**](https://www.npmjs.com/package/express-handlebars)
 
 ### A jump start to getting your node.js app working from top to bottom.
 
-This guide assumes you have some basic grasp of the building blocks of a website. At this point you should have prepared your favorite text or code editor. I personally use [Atom](https://atom.io/), but anything similar works fine. In order to really get the most out of it, you would be better off already having a foundation in **HTML**, **CSS**, **JavaScript**, and an understanding of **relational databases**.
+This guide assumes you have some basic grasp of the building blocks of a website. At this point you should have prepared your favorite text or code editor. I personally use [Atom](https://atom.io/), but anything similar works fine. In order to really get the most out of it, you would be better off already having a foundation in [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML), [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS), [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript), and an understanding of [**relational databases**](https://en.wikipedia.org/wiki/Relational_database).
 
 ## Contents
 
-### 1. [Getting Set Up](#getting-set-up) - (installations)
+### 1. [Installations](#installations)
+### 2. [Directory](#directory)
 
 
-## Getting Set Up
+## Installations
 The following is the easiest way that I've found to get everything working on a mac. If you aren't using a mac, or if the steps listed are somehow not working for you, please visit the reference links for more information.
 
 ### Get Homebrew (macOS only)
@@ -46,9 +47,8 @@ It should return something that looks like...
 
 **Homebrew Reference Links**
 
-If you have any problems check out the sites below.
-
 <https://brew.sh/>
+
 <https://github.com/Homebrew/brew/>
 
 
@@ -73,3 +73,29 @@ Type the following into your terminal and press `Enter`:
 **node.js Reference Link**
 
 <https://nodejs.org/en/>
+
+## Directory
+
+**"Folder" = "Directory"**
+
+Create a new directory wherever you like, then using your terminal navigate to inside that directory.
+
+Follow these steps to import the npm packages and set up the structure of your application:
+
+In the terminal:
+
+I always do this first, because the next step initializes node with this file as the entry point. It is not required, and you can change the start script in the `package.json` file at any time later on.
+
+1. `touch server.js` then `Enter`
+
+This skips over a few steps where you can customize the details about your application, but additionally makes some assumptions and inputs data into some fields for you. An example being if you are initializing in a directory that is linked to a git repository. It will detect that and input the details for you.
+
+2. `npm init -y` then `Enter`
+
+This will install all the node packages essential to this example. You can do each package one by one, or list them all at once as I did above. (ie: `npm install express` then `npm install sequelize` etc.)
+
+3. `npm install express sequelize sequelize-cli mysql2 body-parser method-override express-handlebars` then `Enter`
+
+At this point you should have the directory `node_modules` and the files `package-lock.json`, `package.json`, and `server.js` inside your directory. This step will create more of the file structure for you. Specifically, the `config` and `models` directories. Inside `config` you will find the `config.json` file, and inside `models` you will find the `index.js` files after this step. Additionally, if you installed `Sequelize` globally, you can use the shortened version of this command, which is `sequelize init:config init:models`. To see the other possible tasks you can initialize with this method visit the npm [sequelize-cli](https://www.npmjs.com/package/sequelize-cli) page.
+
+4. `node_modules/.bin/sequelize init:config init:models`
