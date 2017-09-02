@@ -1,8 +1,12 @@
-# **Node.JS, Sequelize, Express, Express-Handlebars**
+# Working With...
+## * Node.JS
+## * Sequelize
+## * Express
+## * Express-Handlebars
 
 ### A jump start to getting your node.js app working from top to bottom.
 
-This guide assumes you have some basic grasp of the building blocks of a website. At this point you should have prepared your favorite text or code editor. I personally use [Atom](https://atom.io/), but anything similar works fine. On the other hand, in order to really get the most out of it, you would be better off already having a foundation in **HTML**, **CSS**, **JavaScript**, and an understanding of **relational databases**.
+This guide assumes you have some basic grasp of the building blocks of a website. At this point you should have prepared your favorite text or code editor. I personally use [Atom](https://atom.io/), but anything similar works fine. In order to really get the most out of it, you would be better off already having a foundation in **HTML**, **CSS**, **JavaScript**, and an understanding of **relational databases**.
 
 ## Contents
 
@@ -26,8 +30,11 @@ Homebrew is a package manager for macOS. This means you can use it to install a 
 This will get **Homebrew** installed on your machine. It should look something like the following...
 
 ![HB Install 1](./RMimages/1.png 'HB Install 1')
+
 ![HB Install 2](./RMimages/2.png 'HB Install 2')
+
 ![HB Install 3](./RMimages/3.png 'HB Install 3')
+
 ![HB Install 4](./RMimages/4.png 'HB Install 4')
 
 Next type `brew --version` into the console.
