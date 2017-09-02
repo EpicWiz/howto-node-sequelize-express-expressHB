@@ -1,0 +1,29 @@
+In the development object you will find the credentials that your computer will
+use to access the database on your local computer. That is what you will use during
+development.
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "database_development",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
+In the production object, the values will be defined by whatever place your application
+will be hosted. For example, on heroku you may use JAWSdb for your mysql database. In that
+case you would have to fill the values relative the JAWSdb credentials.

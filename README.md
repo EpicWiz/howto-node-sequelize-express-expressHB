@@ -12,13 +12,13 @@ This guide assumes you have some basic grasp of the building blocks of a website
 
 ### 1. [Installations](#installations)
 ### 2. [Directory](#directory)
-
+### 3. [Sequelize-CLI Files](#sequelize-cli-files)
 
 ## Installations
 The following is the easiest way that I've found to get everything working on a mac. If you aren't using a mac, or if the steps listed are somehow not working for you, please visit the reference links for more information.
 
 ### Get Homebrew (macOS only)
-Homebrew is a package manager for macOS. This means you can use it to install a lot more useful things far more easily that through alternative means.
+Homebrew is a package manager for macOS. This means you can use it to install a lot more useful things far more easily than through alternative means.
 
 [![HB Website](./RMimages/hb.png)](https://brew.sh/)
 
@@ -101,3 +101,9 @@ This will install all the node packages essential to this example. You can do ea
 At this point you should have the directory `node_modules` and the files `package-lock.json`, `package.json`, and `server.js` inside your directory. This step will create more of the file structure for you. Specifically, the `config` and `models` directories. Inside `config` you will find the `config.json` file, and inside `models` you will find the `index.js` files after this step. Additionally, if you installed `Sequelize` globally, you can use the shortened version of this command, which is `sequelize init:config init:models`. To see the other possible tasks you can initialize with this method visit the npm [sequelize-cli](https://www.npmjs.com/package/sequelize-cli) page.
 
 4. `node_modules/.bin/sequelize init:config init:models`
+
+## Sequelize-CLI Files
+
+I've created notes explaining the details of the files generated at `/config/config.json` and `/models/index.js` so that everything going in within them is as clear and understandable as I could make it.
+
+[![Sample of commented file](./RMimages/indexExplained.png)](./model-index-wNotes.js)
