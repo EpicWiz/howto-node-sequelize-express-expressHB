@@ -31,11 +31,14 @@ This will get **Homebrew** installed on your machine. It should look something l
 ![HB Install 4](./RMimages/4.png 'HB Install 4')
 
 Next type `brew --version` into the console.
+
 It should return something that looks like...
+
 `Homebrew 1.3.1`
 `Homebrew/homebrew-core (git revision 22df; last commit 2017-09-01)`
 
 **Homebrew Reference Links**
+
 If you have any problems check out the sites below.
 
 <https://brew.sh/>
@@ -46,16 +49,20 @@ If you have any problems check out the sites below.
 In order to have persistent data we need a database. Go ahead and use [**Homebrew**](https://brew.sh/) to install MySQL.
 
 Type the following into your terminal and press `Enter`:
+
 `brew install mysql`
 
 **MySQL Reference Link**
+
 <https://www.mysql.com/>
 
 ### Install node.js
 Node (and the many many packages available to extend its abilities) is how we'll be able to use JavaScript on the back end of our site. Again, use brew to download and install MySQL.
 
 Type the following into your terminal and press `Enter`:
+
 `brew install node`
 
 **node.js Reference Link**
+
 <https://nodejs.org/en/>
