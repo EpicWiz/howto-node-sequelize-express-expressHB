@@ -20,6 +20,8 @@ The following is the easiest way that I've found to get everything working on a 
 ### Get Homebrew (macOS only)
 Homebrew is a package manager for macOS. This means you can use it to install a lot more useful things far more easily that through alternative means.
 
+[![HB Website](./RMimages/hb.png)](https://brew.sh/)
+
 * First you'll have to open up your terminal.
 
 * _Press `CMD` + `Space` to pull up spotlight._
