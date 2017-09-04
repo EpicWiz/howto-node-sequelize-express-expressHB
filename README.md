@@ -4,6 +4,8 @@
 * [**Express**](https://www.npmjs.com/package/express)
 * [**Express-Handlebars**](https://www.npmjs.com/package/express-handlebars)
 
+Mistake corrections welcome! [eric@ericcreates.com](mailto:eric@ericcreates.com?Subject=mistake)
+
 ### A jump start to getting your node.js app working from top to bottom.
 
 This guide assumes you have some basic grasp of the building blocks of a website. At this point you should have prepared your favorite text or code editor. I personally use [Atom](https://atom.io/), but anything similar works fine. In order to really get the most out of it, you would be better off already having a foundation in [**HTML**](https://developer.mozilla.org/en-US/docs/Web/HTML), [**CSS**](https://developer.mozilla.org/en-US/docs/Web/CSS), [**JavaScript**](https://developer.mozilla.org/en-US/docs/Web/JavaScript), and an understanding of [**relational databases**](https://en.wikipedia.org/wiki/Relational_database).
@@ -14,6 +16,8 @@ This guide assumes you have some basic grasp of the building blocks of a website
 ### 2. [Directory](#directory)
 ### 3. [Sequelize-CLI Files](#sequelize-cli-files)
 ### 4. [MVC](#mvc)
+### 5. [Files with Notes](#files-with-notes)
+### 6. [Getting Example Set Up](#getting-example-set-up)
 
 ## Installations
 The following is the easiest way that I've found to get everything working on a mac. If you aren't using a mac, or if the steps listed are somehow not working for you, please visit the reference links for more information.
@@ -33,13 +37,13 @@ Homebrew is a package manager for macOS. This means you can use it to install a 
 
 This will get **Homebrew** installed on your machine. It should look something like the following...
 
-![HB Install 1](./RMimages/1.png 'HB Install 1')
+[HB Install 1](./RMimages/1.png 'HB Install 1')
 
-![HB Install 2](./RMimages/2.png 'HB Install 2')
+[HB Install 2](./RMimages/2.png 'HB Install 2')
 
-![HB Install 3](./RMimages/3.png 'HB Install 3')
+[HB Install 3](./RMimages/3.png 'HB Install 3')
 
-![HB Install 4](./RMimages/4.png 'HB Install 4')
+[HB Install 4](./RMimages/4.png 'HB Install 4')
 
 Next type `brew --version` into the console.
 
@@ -111,11 +115,11 @@ At this point you should have the directory `node_modules` and the files `packag
 
 ## Sequelize-CLI Files
 
-I've created notes explaining the details of the files generated at `/config/config.json` and `/models/index.js` so that everything going in within them is as clear and understandable as I am capable of making it.
+I've created notes explaining the details of the files generated at `/config/config.json` and `/models/index.js` so that everything going on within them is as clear and understandable as I am capable of making it.
 
 1. Click [`/config/config.json`](./config-wNotes.json) to view the notes on this file.
 
-2. Click [`/models/indes.js`](./model-index-wNotes.js) to view the notes on this file.
+2. Click [`/models/index.js`](./model-index-wNotes.js) to view the notes on this file.
 
 ##### Here is a sample from the `index.js` file
 
@@ -128,3 +132,38 @@ MVC (model view controller) is a file structuring style that separates the three
 Your file structure should look similar to what is shown below.
 
 ![File Structure](./RMimages/directories.png)
+
+## Files With notes
+
+In the included `example` directory you will find a simple template with 1-2 example files demonstrating how each of these packages work together. Some files I have created notated examples for, and provided them with the names `filename-wNotes.xxx`. All other files I have left notation to explain the functionality. Download the example directory and follow the directions below to get started.
+
+## Getting Example Set Up
+
+If you've been following along from the beginning, you should have all of your node modules installed already. However, if you've jumped ahead and simply wish to grab the example directly and get started from here I can still help you out.
+
+#### For those starting from here only
+
+1. Download example, or clone this repository and copy the folder to wherever you like.
+2. Open your terminal and navigate to the example directory. Once there type the following:
+
+`npm install` then hit `Enter`
+
+That should install all of the modules required for your template. If you want to see what it will be installing before you take this step, you can check the `package.json` file, and check what is listed under `dependencies`.
+
+3. Go back to the steps [Sequelize-CLI](#sequelize-clie) and [MVC](#mvc) to see what other directories you still need to create before continueing.
+
+#### For everyone...
+
+1. Create your application's database.
+
+* In your terminal, type `mysql -u root` then hit `Enter`. You may be prompted for the root user's password. If so type it in and hit `Enter`. After that you will see a prompt that looks like the image below. If you have any problems getting through this, check out [this link](https://dev.mysql.com/doc/mysql-getting-started/en/) for more assistance.
+
+[MySQL Prompt](./RMimages/mysql.png)
+
+* At the MySQL prompt, type the following commands to get started:
+
+`CREATE DATABASE yourDbName;` then hit `Enter`
+
+That's it!
+
+2. Now put the name of your database into the `config.json` in the `"development"` object next to `"database"` and save the file.
