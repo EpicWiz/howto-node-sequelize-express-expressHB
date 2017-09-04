@@ -13,6 +13,7 @@ This guide assumes you have some basic grasp of the building blocks of a website
 ### 1. [Installations](#installations)
 ### 2. [Directory](#directory)
 ### 3. [Sequelize-CLI Files](#sequelize-cli-files)
+### 4. [MVC](#mvc)
 
 ## Installations
 The following is the easiest way that I've found to get everything working on a mac. If you aren't using a mac, or if the steps listed are somehow not working for you, please visit the reference links for more information.
@@ -24,7 +25,7 @@ Homebrew is a package manager for macOS. This means you can use it to install a 
 
 * First you'll have to open up your terminal.
 
-* _Press `CMD` + `Space` to pull up spotlight._
+* Press `CMD` + `Space` to pull up spotlight.
 
 * Then go ahead and type the following into your terminal and press `Enter`:
 
@@ -61,12 +62,18 @@ Type the following into your terminal and press `Enter`:
 
 `brew install mysql`
 
+After MySQL installs you may need to manually start it up. You can accomplish this by entering the following command.
+
+`mysql.server start`
+
+If it won't start up after this point, or if you cannot connect to the database, please visit the MySQL reference link for more help. To test out your MySQL database connection, try using [MySQL Workbench](https://www.mysql.com/products/workbench/).
+
 **MySQL Reference Link**
 
 <https://www.mysql.com/>
 
 ### Install node.js
-Node (and the many many packages available to extend its abilities) is how we'll be able to use JavaScript on the back end of our site. Again, use brew to download and install MySQL.
+Node (and the many many packages available to extend its abilities) is how we'll be able to use JavaScript on the back end of your site. Again, use brew to download and install MySQL.
 
 Type the following into your terminal and press `Enter`:
 
@@ -98,12 +105,26 @@ This will install all the node packages essential to this example. You can do ea
 
 3. `npm install express sequelize sequelize-cli mysql2 body-parser method-override express-handlebars` then `Enter`
 
-At this point you should have the directory `node_modules` and the files `package-lock.json`, `package.json`, and `server.js` inside your directory. This step will create more of the file structure for you. Specifically, the `config` and `models` directories. Inside `config` you will find the `config.json` file, and inside `models` you will find the `index.js` files after this step. Additionally, if you installed `Sequelize` globally, you can use the shortened version of this command, which is `sequelize init:config init:models`. To see the other possible tasks you can initialize with this method visit the npm [sequelize-cli](https://www.npmjs.com/package/sequelize-cli) page.
+At this point you should have the directory `node_modules` and the files `package-lock.json`, `package.json`, and `server.js` inside your directory. This step will create more of the file structure for you. Specifically, the `config` and `models` directories. Inside `config` you will find the `config.json` file, and inside `models` you will find the `index.js` file after this step. Additionally, if you installed `Sequelize` globally, you can use the shortened version of this command, which is `sequelize init:config init:models`. To see the other possible tasks you can initialize with this method visit the npm [sequelize-cli](https://www.npmjs.com/package/sequelize-cli) page.
 
-4. `node_modules/.bin/sequelize init:config init:models`
+4. `node_modules/.bin/sequelize init:config init:models` then `Enter`
 
 ## Sequelize-CLI Files
 
-I've created notes explaining the details of the files generated at `/config/config.json` and `/models/index.js` so that everything going in within them is as clear and understandable as I could make it.
+I've created notes explaining the details of the files generated at `/config/config.json` and `/models/index.js` so that everything going in within them is as clear and understandable as I am capable of making it.
+
+1. Click [`/config/config.json`](./config-wNotes.json) to view the notes on this file.
+
+2. Click [`/models/indes.js`](./model-index-wNotes.js) to view the notes on this file.
+
+##### Here is a sample from the `index.js` file
 
 [![Sample of commented file](./RMimages/indexExplained.png)](./model-index-wNotes.js)
+
+## MVC
+
+MVC (model view controller) is a file structuring style that separates the three crucial elements of your web page or application. `Sequelize-CLI` already helped to get the models directory created, so we should go ahead and create the `views` and `controllers` directories. You will also need to create the `layouts` subdirectory inside `views`. In addition to those you will also make a directory called `assets` that will contain all of your publicly visible files. Inside the `assets` directory I usually make a `css`, `img`, and `js` subdirectory. While not required, it is helpful to keep your files organized.
+
+Your file structure should look similar to what is shown below.
+
+![File Structure](./RMimages/directories.png)
