@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) { // this module is imported int
     }
   });
 
-  Food.associate = function(models) {
+  Food.associate = function(models) { //this will create the column "AnimalId" on the Food table. That is what you (and sequelize) will use to join or reference the relationship between the table data across both tables
     Food.belongsTo(models.Animal);
   };
 

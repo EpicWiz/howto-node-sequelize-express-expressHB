@@ -4,14 +4,14 @@ module.exports = function(app) { //exports all of the routes on this page - they
 
   app.get('/', function(request, response) { //this is the route for your home page, or what is initially displayed/what action is performed when the site is visited by a user
     db.Animal.findAll({
-      include: [{models: db.Food}]  //for a better explanation about include than I can give, check out https://gist.github.com/zcaceres/83b554ee08726a734088d90d455bc566
+      include: [db.Food]  //for a better explanation about include than I can give, check out https://gist.github.com/zcaceres/83b554ee08726a734088d90d455bc566
     })
-    .then((data) => {
+    .then((data) => { //actions to perform after query is completed
       let hbsObject = {
         animal: data
       };
       response.render('index', hbsObject); //loads your index.handlebars page and displays it to the user
-    }).catch((error) => {
+    }).catch((error) => { //if there was an error, print it to the console
       console.log(error);
     });
   });
