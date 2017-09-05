@@ -25,6 +25,74 @@ This guide assumes you have some basic grasp of the building blocks of a website
 ## Installations
 The following is the easiest way that I've found to get everything working on a mac. If you aren't using a mac, or if the steps listed are somehow not working for you, please visit the reference links for more information.
 
+### Linux Installation Instructions
+
+These steps were generously provided by (Namho Kim)[https://github.com/namho-kim], a knowledgable and nearly exclusive user of linux.
+
+####Pull request for installing on Linux (since most servers are Linux).
+
+**Nodejs**
+
+*Ubuntu:*
+
+`sudo apt-get install nodejs`
+
+*CentOS/RHEL:*
+
+`sudo yum install nodejs`
+
+*Fedora:*
+
+`sudo dnf install nodejs`
+
+**MySQL**
+
+*Ubuntu:*
+
+`sudo apt-get install mysql-server`
+
+*CentOS/RHEL:*
+
+`sudo yum install mariadb-server mariadb`
+
+*Fedora:*
+
+`sudo dnf install mariadb-server mariadb`
+
+_If you must use MySQL for some reason:_
+
+Download the RPM for your OS here: <https://dev.mysql.com/downloads/repo/yum/>
+
+If this is on a web server, you'll want to use wget. Right click on the DOWNLOAD button and click `copy link location`. Then download it by running:
+
+`wget <download url>`
+
+Then install:
+
+`sudo yum localinstall <file-you-downloaded>.rpm`
+
+Enable 5.7 or 5.6 depending on your preferences (go with 5.7):
+
+`sudo yum-config-manager --disable mysql56-community
+sudo yum-config-manager --enable mysql57-community`
+
+Install:
+
+`sudo yum install mysql-server-community
+(replace yum with dnf in Fedora)
+`
+
+Start MySQL/Mariadb:
+
+`sudo systemctl start mariadb
+sudo systemctl start mysqld`
+
+Optional, but you should do this especially if this is a server not a local machine:
+
+`sudo mysql_secure_installation`
+
+Follow the steps that come out.
+
 ### Get Homebrew (macOS only)
 Homebrew is a package manager for macOS. This means you can use it to install a lot more useful things far more easily than through alternative means.
 
