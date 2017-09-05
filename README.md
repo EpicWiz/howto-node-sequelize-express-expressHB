@@ -201,9 +201,9 @@ There are many steps involved in making an application for the web, and it's eas
 
 You'll often hear mention of `reusable` code when you talk with many developers, and that's exactly what I aimed to provide here. It's just a piece of reusable code that I've elected to share with you.
 
+CRUD (create, read, update, delete) is represented in the example files along with some notes.
+
 * I hope this guide was helpful to you.
 * Please let me know if you see any mistakes by creating an **[issue](https://github.com/EpicWiz/howto-node-sequelize-express-expressHB/issues)**. (code, spelling, grammar, etc.) Or if you can think of some additional tips that would be helpful. I'll credit the tip to you for your help.
 * I encourage you to use this repository to do whatever you want.
 * If you're going to copy this `README.md` file to post somewhere else, I would appreciate it if you would credit me or link to this repository.
-
-###
