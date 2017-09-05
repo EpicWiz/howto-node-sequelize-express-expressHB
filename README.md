@@ -195,7 +195,7 @@ Inside the `/example/models` directory there is already an example of a Sequeliz
 
 ## Final notes
 
-This guide is a work in progress. I really wanted to have something helpful that I, and perhaps others, could reference in order to get a note-sequelize-express-handlebars app up and running as quickly as possible.
+This guide is a work in progress. I really wanted to have something helpful that I, and perhaps others, could reference in order to get a node-sequelize-express-handlebars app up and running as quickly as possible.
 
 There are many steps involved in making an application for the web, and it's easy to mix things up and lose yourself if you're not careful.
 
