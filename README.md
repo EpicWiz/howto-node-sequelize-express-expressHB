@@ -27,7 +27,7 @@ The following is the easiest way that I've found to get everything working on a 
 
 ### Linux Installation Instructions
 
-These steps were generously provided by [Namho Kim](https://github.com/namho-kim), a knowledgable and nearly exclusive user of linux.
+These linux installation instructions were generously provided by [Namho Kim](https://github.com/namho-kim), a knowledgable and nearly exclusive user of linux.
 
 #### Pull request for installing on Linux (since most servers are Linux).
 
