@@ -102,6 +102,8 @@ Homebrew is a package manager for macOS. This means you can use it to install a 
 
 * Press `CMD` + `Space` to pull up spotlight.
 
+* Type `terminal` then press `Enter`.
+
 * Then go ahead and type the following into your terminal and press `Enter`:
 
 `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
