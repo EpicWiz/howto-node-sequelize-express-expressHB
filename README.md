@@ -178,7 +178,7 @@ This skips over a few steps where you can customize the details about your appli
 
 2. `npm init -y` then `Enter`
 
-This will install all the node packages essential to this example. You can do each package one by one, or list them all at once as I did above. (ie: `npm install express` then `npm install sequelize` etc.)
+This will install all the node packages essential to this example. You can do each package one by one, or list them all at once as I did below. (ie: `npm install express` then `npm install sequelize` etc.)
 
 3. `npm install express sequelize sequelize-cli mysql2 body-parser method-override express-handlebars` then `Enter`
 
